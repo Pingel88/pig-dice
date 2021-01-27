@@ -1,16 +1,26 @@
-# {Project Name}
-#### *Co-Created By:*
-#### *Co-Created By:*
-#### *{Brief Project Description}*
+# *PIG DICE*
+#### *Co-Created By: Mike Pingel*
+#### *Co-Created By: David Couch*
+#### *A Dice Game Called PIG!*
 
 * * *
 
 ## Description  
-{project description}
+`A dice game made in JavaScript using constructors, prototypes, objects, and conditionals. This game is played between two users that roll the dice to gain points.`
+
+Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold":
+
+* If the player rolls a 1, they score nothing and it becomes the next player's turn.
+* If the player rolls any other number, it is added to their turn total and the player's turn continues.
+* If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
+
+The first player to score 100 or more points wins.
 
 * * *
 ## Specs
+```js
 
+```
 
 * * *
 
@@ -25,7 +35,7 @@
 
 ## Setup instructions:  
 
-* _Go to https://github.com/mekinsie/Bank-Account_
+* _Go to_ _https://github.com/dcouch440/pig-dice.git_
 *  Navigate to the code button on the github website.\
 ![Code button](/img/README/code.PNG)
 
@@ -41,7 +51,7 @@
 
 - Once you have chosen your desired directory use the command.
 ```bash 
-git clone https://github.com/mekinsie/Bank-Account_
+git clone https://github.com/dcouch440/pig-dice.git
 ```
 
 <div 
@@ -110,9 +120,14 @@ code .
 ## License:
 > *&copy; David Couch, 2021*
 
+> *&copy; Mike Pingel, 2021*
+
+
 Licensed under [MIT license](https://mit-license.org/)
 
 * * *
 
 ## Contact Information
 _David Couch: [Email](dcouch440@gmail.com)_
+
+_Mike Pingel: [Email](mdpingel@gmail.com)_
