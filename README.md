@@ -37,7 +37,7 @@
 - Within your Bash terminal navigate to your desired location by using cd fallowed by your desired directory.
 ```bash
  cd Desktop
-``` 
+```  
 
 - Once you have chosen your desired directory use the command.
 ```bash 
