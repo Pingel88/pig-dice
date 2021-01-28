@@ -9,6 +9,6 @@ html, body {
 }
 
 
-#player-two, #game {
+#player-two, #game, #winner{
   display: none;
 }

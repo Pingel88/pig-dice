@@ -10,26 +10,34 @@
   <title>Document</title>
 </head>
 <body>
-  <form id="form-player-one">
-    <div id="player-one">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Player One Name</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  <div class="container">
+    <form id="form-player-one">
+      <div id="player-one">
+        <div class="form-group">
+          <label for="player-one-input">Player One Name</label>
+          <input type="text" class="form-control" id="player-one-input" placeholder="Enter name">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-  </form>
-  <form id="form-player-two">
-    <div id="player-two">
-      <div class="form-group">
-        <label for="exampleInputEmail1">Player Two Name</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    </form>
+    <form id="form-player-two">
+      <div id="player-two">
+        <div class="form-group">
+          <label for="player-two-input">Player Two Name</label>
+          <input type="text" class="form-control" id="player-two-input" placeholder="Enter name">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div id="game">
+      <h1>this is the game</h1>
+      <div id="game-buttons">
+        <button id="next-turn">NEXT TURN</button>
+        <button id="roll">Roll</button>
+      </div>
+      <h2>Roll: <span id="dice-roll"></span></h2>
+      <h2 id="winner">The winner is: <span id="player-winner"></span>!!!!!!!!!!!!</h2>
     </div>
-  </form>
-  <div id="game">
-    <h1>this is the game</h1>
   </div>
 </body>
 </html>

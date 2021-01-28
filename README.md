@@ -23,10 +23,6 @@ Describe: Player()
 Test: 'It will create an object that holds name and score'
 Expect: new Player('Mike').toEqual({name: 'Mike', score: 0})
 
-Describe: pig()
-Test: 'It will conditionally decide the outcome of the game'
-
-
 
 ```
 * * *
