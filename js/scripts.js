@@ -8,7 +8,7 @@ function Game() {
 Game.prototype.setTurn = function(arg){
   this.turn = arg
 }
-Game.prototype.changeAction = function(arg) {
+Game.prototype.setAction = function(arg) {
   this.currentAction = arg
 }
 function Player(name) {
@@ -55,7 +55,7 @@ function pig(P1, P2, game) {
         P1.removePoints()
         game.setTurn(P2.name)
         nextTurn = 'current-turn'
-      } else if (turn === P2.name) {
+      } else if (game.turn === P2.name) {
         P2.addTotalPoints()
         P2.removePoints()
         game.setTurn(P1.name)
@@ -107,7 +107,6 @@ $(document).ready(function() {
   let pigGame = new Game()
   let playerOne;
   let playerTwo;
-
   $("form#form-player-one").submit(function(event) {
     event.preventDefault();
     playerOne = new Player($("input#player-one-input").val());
@@ -125,19 +124,21 @@ $(document).ready(function() {
   });
   $('#next-turn').click(function(event) {
     event.preventDefault()
+    pigGame.setAction('turn')
     pig(playerOne, playerTwo, pigGame)
     // console.log('Next Turn')
     // console.log("\n")
-  })
+  });
   $('#roll').click(function(event) {
     event.preventDefault()
+    pigGame.setAction('roll')
     pig(playerOne, playerTwo, pigGame)
-    // console.log('New Roll')
-    // console.log(playerOne.name + " score: " + playerOne.score)
-    // console.log(playerOne.name + " score: " + playerOne.totalScore)
-    // console.log("\n")
-    // console.log(playerTwo.name + " score: " + playerTwo.score)
-    // console.log(playerTwo.name + " score: " + playerTwo.totalScore)
-    // console.log("\n")
+    console.log('New Roll')
+    console.log(playerOne.name + " score: " + playerOne.score)
+    console.log(playerOne.name + " score: " + playerOne.totalScore)
+    console.log("\n")
+    console.log(playerTwo.name + " score: " + playerTwo.score)
+    console.log(playerTwo.name + " score: " + playerTwo.totalScore)
+    console.log("\n")
   })
 });
