@@ -39,10 +39,6 @@ Describe: Game()
 Test: 'It will create a game to function as the global variables needed to function'
 Expect: new Game().toEqual({turn: undefined, currentAction: undefined, roll: undefined})
 
-Describe: Game.prototype.setRoll
-Test: 'it will set the current roll'
-Expect: pigGame.setRoll(4).toEqual({turn: undefined, currentAction: undefined, roll: 4})
-
 Describe: Game.prototype.setTurn
 Test: 'It will set the player turn'
 Expect: pigGame.setTurn(playerOne).toEqual({turn: 'Mike', currentAction: undefined, roll: undefined})
@@ -51,6 +47,9 @@ Describe: Game.prototype.setAction
 Test: 'It set the current action to be taken'
 Expect: pigGame.setAction('roll').toEqual({turn: undefined, currentAction: 'roll', roll: undefined})
 
+Describe: Game.prototype.setRoll
+Test: 'it will set the current roll'
+Expect: pigGame.setRoll(4).toEqual({turn: undefined, currentAction: undefined, roll: 4})
 ```
 * * *
 
@@ -137,13 +136,10 @@ code .
 
 * * *
 
-## To Do:
-* {future changes to the project}
-
 * * *
 
 ## Addition comments:
-* Created on x/xx/21
+* Created on 1/28/21
 
 * * *
 
