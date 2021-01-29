@@ -7,8 +7,38 @@ html, body {
   height: 100%;
   width: 100%;
 }
-
-
+h1 {
+  color: goldenrod;
+}
 #player-two, #game, #winner{
   display: none;
 }
+.container-main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(32, 32, 32, 0.993);
+  text-shadow: 1px 1px 2px goldenrod;
+}
+.container-main button {
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  background: transparent;
+  border: 2px solid goldenrod;
+  border-radius: 5px;
+  color: white;
+  box-shadow: inset 1px 1px 5px 1px rgba(218, 165, 32, 0.418);
+  text-shadow: 1px 1px 2px goldenrod;
+}
+.container-main button:focus {
+  outline-style: none;
+  box-shadow: 0px 0px 1px 2px honeydew;
+}
+#results > div{
+  margin: 5px;
+  color: goldenrod;
+}
+

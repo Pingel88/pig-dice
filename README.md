@@ -21,8 +21,35 @@ The first player to score 100 or more points wins.
 ```js
 Describe: Player()
 Test: 'It will create an object that holds name and score'
-Expect: new Player('Mike').toEqual({name: 'Mike', score: 0})
+Expect: new Player('Mike').toEqual({name: 'Mike', score: 0, totalScore: 0})
 
+Describe: Player.prototype.addPoints()
+Test: 'It will add the accumulation of rolls from a user roll'
+Expect: playerOne.addPoints(4).toEqual({name: 'Mike', score: 4, totalScore: 0})
+
+Describe: Player.prototype.removePoints()
+Test: 'It will remove the accumulative points of a user'
+Expect: playerOne.removePoints().toEqual({name: 'Mike', score: 0, totalScore: 0})
+
+Describe: Player.prototype.addTotalPoints()
+Test: 'It will add accumulative points to the total score'
+Expect: playerOne.addTotalPoints().toEqual({name: 'Mike', score: 0, totalScore: 4})
+
+Describe: Game()
+Test: 'It will create a game to function as the global variables needed to function'
+Expect: new Game().toEqual({turn: undefined, currentAction: undefined, roll: undefined})
+
+Describe: Game.prototype.setRoll
+Test: 'it will set the current roll'
+Expect: pigGame.setRoll(4).toEqual({turn: undefined, currentAction: undefined, roll: 4})
+
+Describe: Game.prototype.setTurn
+Test: 'It will set the player turn'
+Expect: pigGame.setTurn(playerOne).toEqual({turn: 'Mike', currentAction: undefined, roll: undefined})
+
+Describe: Game.prototype.setAction
+Test: 'It set the current action to be taken'
+Expect: pigGame.setAction('roll').toEqual({turn: undefined, currentAction: 'roll', roll: undefined})
 
 ```
 * * *

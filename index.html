@@ -10,12 +10,12 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container-main">
     <form id="form-player-one">
       <div id="player-one">
         <div class="form-group">
           <label for="player-one-input">Player One Name</label>
-          <input type="text" class="form-control" id="player-one-input" placeholder="Enter name">
+          <input type="text" autocomplete="off" class="form-control" id="player-one-input" placeholder="Enter name">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
@@ -24,19 +24,24 @@
       <div id="player-two">
         <div class="form-group">
           <label for="player-two-input">Player Two Name</label>
-          <input type="text" class="form-control" id="player-two-input" placeholder="Enter name">
+          <input type="text" autocomplete="off" class="form-control" id="player-two-input" placeholder="Enter name">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </div>
     </form>
     <div id="game">
-      <h1>this is the game</h1>
+      <h1>This is the game</h1>
       <div id="game-buttons">
         <button id="next-turn">NEXT TURN</button>
         <button id="roll">Roll</button>
       </div>
-      <h2>Roll: <span id="dice-roll"></span></h2>
-      <h2 id="winner">The winner is: <span id="player-winner"></span>!!!!!!!!!!!!</h2>
+      <div id="results">
+        <div>Roll: <span id="dice-roll"></span></div>
+        <div>Roll Total: <span id="dice-roll-total"></span></div>
+        <div>Player 1 Total: <span id="player-one-total"></span></div>
+        <div>Player 2 Total: <span id="player-two-total"></span></div>     
+        <div id="winner">The winner is: <span id="player-winner"></span>!!!!!!!!!!!!</div>
+      </div>
     </div>
   </div>
 </body>
